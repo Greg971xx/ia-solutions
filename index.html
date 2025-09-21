@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Solutions Guadeloupe - Intégration Intelligence Artificielle TPE PME</title>
+    <meta name="description" content="Services d'intégration IA pour TPE/PME en Guadeloupe. Automatisation, chatbots, optimisation business. Audit gratuit et accompagnement personnalisé.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fbbf24;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fbbf24;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #06b6d4 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            color: #1f2937;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e40af;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e40af;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #3b82f6;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #1e40af;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Sectors Section */
+        .sectors {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .sectors h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .sector-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .sector-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .sector-icon {
+            font-size: 3rem;
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: #fbbf24;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #374151;
+            margin-bottom: 2rem;
+        }
+
+        .cta-secondary {
+            background: #1e40af;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .cta-secondary:hover {
+            background: #1e3a8a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+        }
+
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #3b82f6, #1e40af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        }
+
+        .chat-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #fbbf24;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+            40%, 43% { transform: translate3d(0,-8px,0); }
+            70% { transform: translate3d(0,-4px,0); }
+            90% { transform: translate3d(0,-2px,0); }
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+
+        .chat-header {
+            background: linear-gradient(45deg, #3b82f6, #1e40af);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .chat-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .chat-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 80%;
+            animation: slideIn 0.3s ease;
+        }
+
+        .bot-message {
+            align-self: flex-start;
+        }
+
+        .user-message {
+            align-self: flex-end;
+        }
+
+        .message-content {
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .bot-message .message-content {
+            background: #f3f4f6;
+            color: #1f2937;
+            border-bottom-left-radius: 6px;
+        }
+
+        .user-message .message-content {
+            background: #3b82f6;
+            color: white;
+            border-bottom-right-radius: 6px;
+        }
+
+        .quick-options {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .quick-btn {
+            background: #e5e7eb;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+            text-align: left;
+            transition: background 0.3s;
+        }
+
+        .quick-btn:hover {
+            background: #d1d5db;
+        }
+
+        .chat-input-container {
+            padding: 15px 20px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #chat-input {
+            flex: 1;
+            border: 1px solid #d1d5db;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #chat-input:focus {
+            border-color: #3b82f6;
+        }
+
+        #chat-send {
+            background: #3b82f6;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        #chat-send:hover {
+            background: #2563eb;
+        }
+
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 16px;
+            background: #f3f4f6;
+            border-radius: 18px;
+            border-bottom-left-radius: 6px;
+            max-width: fit-content;
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background: #6b7280;
+            border-radius: 50%;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingAnimation {
+            0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+            30% { transform: translateY(-10px); opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .chat-window {
+                width: 300px;
+                height: 400px;
+            }
+            
+            .chatbot-container {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 IA Solutions Guadeloupe</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#secteurs">Secteurs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Révolutionnez votre entreprise avec l'IA</h1>
+                <p>Solutions d'Intelligence Artificielle sur-mesure pour les TPE/PME de Guadeloupe. Automatisation, optimisation et croissance garanties.</p>
+                <a href="#contact" class="cta-button">Audit Gratuit 30min</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Pourquoi choisir l'IA maintenant ?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in stagger-1">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Gain de temps immédiat</h3>
+                    <p>Automatisez 80% de vos tâches répétitives et libérez votre temps pour développer votre business.</p>
+                </div>
+                <div class="benefit-card fade-in stagger-2">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Réduction des coûts</h3>
+                    <p>Économisez jusqu'à 40% sur vos coûts opérationnels grâce à l'optimisation intelligente.</p>
+                </div>
+                <div class="benefit-card fade-in stagger-3">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Avantage concurrentiel</h3>
+                    <p>Prenez de l'avance sur vos concurrents avec des technologies de pointe adaptées à la Guadeloupe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Nos Services IA</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🤖 Automatisation Intelligente</h3>
+                    <p>Chatbots WhatsApp Business, gestion automatique des emails, réservations et facturation. Réponses 24/7 à vos clients.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎯 Intelligence Client</h3>
+                    <p>Analyse comportementale, recommandations personnalisées, fidélisation automatisée et prédiction des besoins clients.</p>
+                </div>
+                <div class="service-card">
+                    <h3>📊 Optimisation Business</h3>
+                    <p>Prévisions de ventes, gestion intelligente des stocks, prix dynamiques et analytics avancés pour maximiser vos profits.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎓 Formation & Support</h3>
+                    <p>Accompagnement personnalisé, formation de vos équipes, maintenance continue et support technique réactif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sectors" id="secteurs">
+        <div class="container">
+            <h2>Secteurs d'Expertise</h2>
+            <div class="sectors-grid">
+                <div class="sector-card fade-in stagger-1">
+                    <div class="sector-icon">🏨</div>
+                    <h3>Hôtellerie & Restauration</h3>
+                    <p>Gestion réservations, recommandations menu, service client automatisé, optimisation occupation.</p>
+                </div>
+                <div class="sector-card fade-in stagger-2">
+                    <div class="sector-icon">🛍️</div>
+                    <h3>Commerce & Distribution</h3>
+                    <p>Gestion stocks intelligente, recommandations produits, analyse des ventes, expérience client personnalisée.</p>
+                </div>
+                <div class="sector-card fade-in stagger-3">
+                    <div class="sector-icon">💼</div>
+                    <h3>Services Professionnels</h3>
+                    <p>Automatisation administrative, gestion rendez-vous, analyse documentaire, relation client optimisée.</p>
+                </div>
+                <div class="sector-card fade-in stagger-4">
+                    <div class="sector-icon">🌱</div>
+                    <h3>Agriculture & Agro</h3>
+                    <p>Optimisation cultures, prédictions météo, gestion ressources, traçabilité produits, marchés intelligents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Prêt à transformer votre entreprise ?</h2>
+            <p>Bénéficiez d'un audit gratuit de 30 minutes pour identifier vos opportunités d'automatisation</p>
+            <a href="#contact" class="cta-secondary">Planifier mon audit gratuit</a>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chat-button" class="chat-button">
+            <i class="fas fa-robot"></i>
+            <span class="chat-notification">💬</span>
+        </div>
+        
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>Assistant IA - Solutions Guadeloupe</span>
+                </div>
+                <button id="chat-close" class="chat-close">×</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Bonjour ! 👋 Je suis votre assistant IA. Comment puis-je vous aider aujourd'hui ?
+                        <div class="quick-options">
+                            <button class="quick-btn" data-message="Je veux un audit gratuit">🔍 Audit gratuit</button>
+                            <button class="quick-btn" data-message="Quels sont vos services ?">💼 Vos services</button>
+                            <button class="quick-btn" data-message="Quel est le prix ?">💰 Tarifs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Tapez votre message...">
+                <button id="chat-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+590 6XX XX XX XX</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@ia-solutions-guadeloupe.fr</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Guadeloupe - Déplacements sur toute l'île</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Automatisation intelligente<br>
+                    Intelligence client<br>
+                    Optimisation business<br>
+                    Formation & support</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Engagement</h3>
+                    <p>✅ Audit gratuit 30min<br>
+                    ✅ Accompagnement personnalisé<br>
+                    ✅ Support technique local<br>
+                    ✅ Résultats garantis</p>
+                </div>
+            </div>
+            <hr style="border: 1px solid #374151; margin: 2rem 0;">
+            <p>&copy; 2024 IA Solutions Guadeloupe - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Chatbot functionality
+        const chatButton = document.getElementById('chat-button');
+        const chatWindow = document.getElementById('chat-window');
+        const chatClose = document.getElementById('chat-close');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+
+        let isWaitingForContact = false;
+        let contactStep = '';
+
+        // Chatbot responses database
+        const responses = {
+            greetings: [
+                "Bonjour ! Comment puis-je vous aider aujourd'hui ? 😊",
+                "Salut ! Que puis-je faire pour vous ? 👋"
+            ],
+            services: `Voici nos principaux services IA :
+
+🤖 **Chatbots intelligents** (comme celui-ci !)
+- WhatsApp Business automatisé
+- Réponses 24/7 à vos clients
+- Prise de rendez-vous automatique
+
+📊 **Optimisation business**
+- Analyse de vos ventes
+- Gestion automatique des stocks
+- Prévisions intelligentes
+
+🎯 **Marketing intelligent**
+- Recommandations personnalisées
+- Emails automatisés
+- Analyse comportementale clients
+
+💼 **Support & Formation**
+- Installation clé en main
+- Formation de vos équipes
+- Maintenance continue
+
+Quel service vous intéresse le plus ?`,
+
+            prices: `Nos tarifs sont adaptés aux TPE/PME :
+
+💡 **Audit gratuit** : 0€
+- Analyse de vos besoins (30min)
+- Recommandations personnalisées
+- Devis sur-mesure
+
+🚀 **Pack Starter** : 299€/mois
+- Chatbot WhatsApp Business
+- 1000 conversations/mois
+- Support technique inclus
+
+🎯 **Pack Business** : 599€/mois
+- Automatisation complète
+- Analytics avancés
+- Formation équipe
+
+⭐ **Pack Premium** : Sur devis
+- Solutions sur-mesure
+- Intégrations complexes
+- Support prioritaire
+
+Tous nos packs incluent l'installation et 3 mois de support gratuit !
+
+Voulez-vous programmer votre audit gratuit ?`,
+
+            audit: `Parfait ! L'audit gratuit c'est :
+
+✅ **30 minutes d'analyse** de vos processus
+✅ **Identification** des opportunités d'automatisation  
+✅ **Recommandations** personnalisées
+✅ **Devis détaillé** adapté à votre budget
+
+📅 Créneaux disponibles :
+- Lundi à Vendredi : 9h-17h
+- Déplacements sur toute la Guadeloupe
+- Ou en visio si vous préférez
+
+Pour programmer, j'ai besoin de quelques infos :`,
+
+            contact_info: "Donnez-moi vos coordonnées pour programmer l'audit :",
+            
+            faq: {
+                "combien de temps": "L'implémentation d'un chatbot prend 2-3 jours. Pour des solutions plus complexes, comptez 1-2 semaines.",
+                "ça marche vraiment": "Oui ! Nos clients économisent en moyenne 15h/semaine et augmentent leur satisfaction client de 40%.",
+                "support technique": "Support technique local 6j/7 de 8h à 19h. Intervention sur site possible dans toute la Guadeloupe.",
+                "pas technique": "Aucun souci ! Nos solutions sont clé en main. Formation complète de vos équipes incluse.",
+                "prix": "Tarifs adaptés aux TPE/PME dès 299€/mois. Audit gratuit pour évaluer vos besoins précis.",
+                "whatsapp": "Oui, nous intégrons WhatsApp Business API pour automatiser vos conversations clients 24/7."
+            }
+        };
+
+        // Open/close chat
+        chatButton.addEventListener('click', () => {
+            chatWindow.style.display = 'flex';
+            chatButton.style.display = 'none';
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWindow.style.display = 'none';
+            chatButton.style.display = 'flex';
+        });
+
+        // Send message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            addMessage(message, 'user');
+            chatInput.value = '';
+
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Process response
+            setTimeout(() => {
+                hideTypingIndicator();
+                processMessage(message);
+            }, 1500);
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Quick buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('quick-btn')) {
+                const message = e.target.getAttribute('data-message');
+                addMessage(message, 'user');
+                
+                showTypingIndicator();
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    processMessage(message);
+                }, 1500);
+            }
+        });
+
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = text.replace(/\n/g, '<br>');
+            
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Process message and generate response
+        function processMessage(message) {
+            const lowerMessage = message.toLowerCase();
+
+            // Handle contact flow
+            if (isWaitingForContact) {
+                handleContactFlow(message);
+                return;
+            }
+
+            // Check for specific intents
+            if (lowerMessage.includes('audit') || lowerMessage.includes('gratuit')) {
+                addMessage(responses.audit, 'bot');
+                setTimeout(() => addMessage(responses.contact_info, 'bot'), 1000);
+                isWaitingForContact = true;
+                contactStep = 'name';
+                return;
+            }
+
+            if (lowerMessage.includes('service') || lowerMessage.includes('proposez')) {
+                addMessage(responses.services, 'bot');
+                return;
+            }
+
+            if (lowerMessage.includes('prix') || lowerMessage.includes('tarif') || lowerMessage.includes('coût')) {
+                addMessage(responses.prices, 'bot');
+                return;
+            }
+
+            // Check FAQ
+            for (const [keyword, answer] of Object.entries(responses.faq)) {
+                if (lowerMessage.includes(keyword)) {
+                    addMessage(answer, 'bot');
+                    return;
+                }
+            }
+
+            // Default responses
+            if (lowerMessage.includes('bonjour') || lowerMessage.includes('salut')) {
+                addMessage(responses.greetings[Math.floor(Math.random() * responses.greetings.length)], 'bot');
+                return;
+            }
+
+            // Default fallback
+            addMessage(`Je comprends que vous vous renseignez sur nos services IA. 
+
+Voulez-vous que je vous explique :
+🤖 Nos services d'automatisation
+💰 Nos tarifs adaptés aux TPE/PME  
+📅 Comment programmer un audit gratuit
+
+Ou posez-moi directement votre question !`, 'bot');
+        }
+
+        // Handle contact information collection
+        const contactData = {};
+
+        function handleContactFlow(message) {
+            switch (contactStep) {
+                case 'name':
+                    contactData.name = message;
+                    addMessage(`Parfait ${message} ! Quel est votre numéro de téléphone ?`, 'bot');
+                    contactStep = 'phone';
+                    break;
+                    
+                case 'phone':
+                    contactData.phone = message;
+                    addMessage(`Merci ! Quel est votre email ?`, 'bot');
+                    contactStep = 'email';
+                    break;
+                    
+                case 'email':
+                    contactData.email = message;
+                    addMessage(`Et pour finir, quel type d'entreprise avez-vous ? (restaurant, boutique, service, etc.)`, 'bot');
+                    contactStep = 'business';
+                    break;
+                    
+                case 'business':
+                    contactData.business = message;
+                    addMessage(`🎉 Parfait ${contactData.name} !
+
+Vos informations :
+📞 ${contactData.phone}
+📧 ${contactData.email}  
+🏢 ${contactData.business}
+
+Je vous recontacte sous 2h pour programmer votre audit gratuit de 30 minutes.
+
+En attendant, avez-vous d'autres questions sur nos services IA ?`, 'bot');
+
+                    // Here you would send the data to your backend
+                    console.log('Contact data collected:', contactData);
+                    
+                    isWaitingForContact = false;
+                    contactStep = '';
+                    break;
+            }
+        }
+
+        // Typing indicator
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot-message';
+            typingDiv.innerHTML = `
+                <div class="typing-indicator" style="display: flex;">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            `;
+            typingDiv.id = 'typing-indicator';
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            const typing = document.getElementById('typing-indicator');
+            if (typing) typing.remove();
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Contact form simulation
+        document.querySelectorAll('.cta-button, .cta-secondary').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#contact') {
+                    e.preventDefault();
+                    document.querySelector('#contact').scrollIntoView({behavior: 'smooth'});
+                    
+                    // Open chatbot instead of alert
+                    setTimeout(() => {
+                        chatWindow.style.display = 'flex';
+                        chatButton.style.display = 'none';
+                        addMessage("Je vois que vous souhaitez un audit gratuit ! Donnez-moi vos coordonnées et je vous recontacte sous 2h 📞", 'bot');
+                        isWaitingForContact = true;
+                        contactStep = 'name';
+                    }, 800);
+                }
+            });
+        });
+
+        // Auto-open chatbot after 10 seconds (first visit)
+        setTimeout(() => {
+            if (!sessionStorage.getItem('chatbot_seen')) {
+                const notification = document.querySelector('.chat-notification');
+                if (notification) {
+                    notification.style.animation = 'bounce 0.5s infinite';
+                }
+                sessionStorage.setItem('chatbot_seen', 'true');
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
